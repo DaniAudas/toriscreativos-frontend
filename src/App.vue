@@ -228,7 +228,7 @@ export default {
     <div class="container relative py-44  md:py-20 lg:py-0"></div>
     <!-- Imagen en la esquina inferior derecha -->
     <div class="absolute bottom-0 right-0 bg-no-repeat bg-contain" 
-        style="background-image: url('/img/esquina decorada.png'); width: 25rem; height: 27rem;">
+        style="background-image: url('/img/esquina-decorada.png'); width: 25rem; height: 27rem;">
     </div>
   </div>
 </template>
