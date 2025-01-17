@@ -162,16 +162,16 @@ export default {
       <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl text-[#162651] text-center pt-10 pb-10">MESA DE REGALOS</h1>
       <div class="relative w-full h-40 md:h-64">
         <!-- Imagen PNG (fondo) -->
-        <a href="https://example.com" target="_blank" class="hover:opacity-80 transition duration-300">
+        <a href="#" class="hover:opacity-80 transition duration-300">
           <img src="/img/regalo.png" alt="Reagalos" class="w-2/4 mx-auto object-cover">
         </a>
         <!-- Imagen GIF (frente) -->
-        <a href="https://example.com" target="_blank" class="hover:opacity-80 transition duration-300">
+        <a href="#" class="hover:opacity-80 transition duration-300">
           <img src="/img/click.gif" alt="Click Aqui" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-10">
         </a>  
       </div>
       <h1 class="font-bold text-2xl lg:text-4xl text-[#162651] text-center mt-28 md:mt-2 lg:mt-28">DEJA UNA DEDICATORIA A LOS NOVIOS</h1>
-      <a href="#" target="_blank" class="hover:opacity-80 transition duration-300 relative">
+      <a href="#" class="hover:opacity-80 transition duration-300 relative">
         <img src="/img/lista-regalos.png" alt="Lista de regalos" class="h-72 md:h-1/3 center mx-auto pt-10 pb-12 md:pb-10 lg:pb-0">
         <img src="/img/click.gif" alt="Click Aqui" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-10">
       </a>
@@ -232,7 +232,7 @@ export default {
           <span class="underline">Dirección:</span> Av. 5 de Mayo 1400, San Juan
           Aquiahuac, 72810 San Andrés Cholula, Pue.
         </h3>
-        <div class="mt-6 md:mb-6 lg:mb-0">
+        <div class="mt-6 md:mb-6 lg:mb-0 z-10 relative">
           <a href="https://maps.app.goo.gl/EJLjw4rJMfDpsdgz9" target="_blank" class="text-white py-2 px-6 bg-blue-600 hover:bg-blue-700 mt-6 shadow-md hover:shadow-xl transition-shadow duration-300">Dirigime</a>
         </div>
       </div>
