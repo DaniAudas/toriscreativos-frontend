@@ -111,7 +111,7 @@ export default {
 
         Damos gracias a Dios por esta gran
         vocación al matrimonio, le pedimos
-        a nuestra madre, la virgen Maia
+        a nuestra madre, la virgen María
         que nos acompañe en esta nueva
         aventura que emprendemos juntos.
 
