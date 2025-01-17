@@ -30,7 +30,7 @@ clearInterval(this.autoSlide);
           author: "Diego" 
         },
         { 
-          text: "Mis mejores deseoa para ustedes son una pareja muy bonita", 
+          text: "Mis mejores deseos para ustedes son una pareja muy bonita", 
           author: "Elena coty" 
         },
         { 

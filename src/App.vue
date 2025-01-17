@@ -42,10 +42,22 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="flex">
     <div class="relative w-full h-screen">
       <!-- Imagen de fondo -->
-      <img src="/img/principal3.jpg" alt="Imagen" class="w-full h-full object-cover bg-black bg-opacity-50">
+      <!-- Imagen para dispositivos móviles -->
+      <img 
+        src="/img/principal1.jpg" 
+        alt="Imagen móvil"
+        class="block sm:hidden w-full h-full object-cover"
+      />
+
+      <!-- Imagen para tabletas y dispositivos más grandes -->
+      <img 
+        src="/img/principal3.jpg" 
+        alt="Imagen escritorio"
+        class="hidden sm:block w-full h-full object-cover"
+      />
       
       <!-- Texto superpuesto -->
       <div class="absolute inset-0 flex justify-center mt-20">
@@ -64,7 +76,7 @@ export default {
       </div>
     </div>
   </div>
-  <div class="container mx-auto md:columns-2 bg-[#162651]">
+  <div class="container md:columns-2 bg-[#162651]">
     <img src="/img/principal2.jpg" alt="Nuestra historia" class="w-full h-full">
     <div class="justify-center items-center block">
       <h4 class="text-4xl md:text-lg lg:text-4xl px-12 py-12 sm:py-6 lg:py-12 font-playfar text-white">
@@ -116,10 +128,10 @@ export default {
       <img src="/img/adorno.svg" alt="Adorno pie nuestra historia" class="relative md:absolute bottom-0 right-0 px-5 py-5">
     </div>
     <div class="h-auto sm:flex sm:flex-col sm:justify-center sm:items-center">
-      <img src="/img/nuestra-historia.jpg" alt="Nuestra historia" class="h-auto sm:w-11/12">
+      <img src="/img/nuestra-historia.jpg" alt="Nuestra historia" class="h-auto sm:w-11/12 lg:w-full">
     </div>
   </div>
-  <div class="container m-auto bg-[#162651] grid grid-cols-3 grid-rows-1">
+  <div class="bg-[#162651] grid grid-cols-3 grid-rows-1">
       <div class="tile">
         <img src="/img/corazon.png" alt="Corazón" class="pl-10 pt-10">
       </div>
@@ -182,8 +194,8 @@ export default {
     </div>
   </div>
   <div class="relative h-full w-full bg-[#FFFCF5]">
-    <div class="absolute w-4/5 h-4/5 top-10 left-10 bg-no-repeat bg-center opacity-25" 
-       style="background-image: url('/img/anillos.png'); background-size: contain;"></div>
+    <div class="absolute w-4/5 h-4/5 top-10 left-10 bg-no-repeat bg-center opacity-25 bg-[url('/img/anillos.png')]" 
+       style="background-size: contain;"></div>
     <div class="mx-auto mb-4 relative z-10">
       <img src="/img/margen-corazon.png" alt="Margen de corazón" class="mx-auto w-1/3 pt-10">
       <h1 class="text-4xl text-center">Dedicatorias</h1>
@@ -216,7 +228,7 @@ export default {
       <div class="container">
         <h2 class="text-3xl text-white mb-5">Banquete</h2>
         <h3 class="text-2xl text-white">
-          <span class="font-bold">Posada Señorial</span><br>
+          <span class="font-bold">Posada Señorial - Salón aquiahuac</span><br>
           <span class="underline">Dirección:</span> Av. 5 de Mayo 1400, San Juan
           Aquiahuac, 72810 San Andrés Cholula, Pue.
         </h3>
@@ -227,8 +239,8 @@ export default {
     </div>
     <div class="container relative py-44  md:py-20 lg:py-0"></div>
     <!-- Imagen en la esquina inferior derecha -->
-    <div class="absolute bottom-0 right-0 bg-no-repeat bg-contain" 
-        style="background-image: url('/img/esquina-decorada.png'); width: 25rem; height: 27rem;">
+    <div class="absolute bottom-0 right-0 bg-no-repeat bg-contain bg-[url('/img/esquina-decorada.png')]" 
+        style="width: 25rem; height: 27rem;">
     </div>
   </div>
 </template>
