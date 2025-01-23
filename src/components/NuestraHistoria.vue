@@ -14,7 +14,7 @@ export default {
           }
         });
       },
-      { threshold: 0.1 } // Activar cuando el 10% sea visible
+      {threshold: 0} // Activar cuando el 10% sea visible
     );
     observer.observe(this.$refs.animar);
   },
@@ -24,7 +24,7 @@ export default {
     <div class="flex flex-col md:grid md:grid-cols-2 bg-[#FFFCF5]"><!--Sección nuestra historia-->
     <div 
     ref="animar" 
-    class="h-auto relative opacity-0 transition-opacity duration-1000"
+    class="h-auto relative"
     :class="{ 'animate-fadeInLeft': isVisible }">
       <h1 class="text-5xl pt-8 text-center font-lobster">
         Nuestra historia
@@ -63,7 +63,7 @@ export default {
       ref="animar" 
       src="/img/nuestra-historia.jpg" 
       alt="Nuestra historia" 
-      class="h-auto sm:w-11/12 lg:w-full opacity-0 transition-opacity duration-1000"
+      class="h-auto sm:w-11/12 lg:w-full"
       :class="{ 'animate-fadeInRight': isVisible }">
     </div>
   </div>

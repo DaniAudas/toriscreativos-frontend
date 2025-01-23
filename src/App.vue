@@ -18,7 +18,19 @@ import Direcciones from './components/Direcciones.vue';
   }
 }*/
 
-export default { 
+export default {
+  name: "App",
+  mounted() {
+    this.playAudio();
+  },
+  methods: {
+    playAudio() {
+      const audio = new Audio("/cancion.mp3"); // Ruta relativa a tu archivo
+      audio.play().catch((error) => {
+        console.warn("La reproducción automática fue bloqueada:", error);
+      });
+    },
+  }, 
   components: {
     Inicio,
     CitaBiblica,
