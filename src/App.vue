@@ -7,6 +7,7 @@ import NuestraHistoria from './components/NuestraHistoria.vue';
 import Enlaces from './components/Enlaces.vue';
 import DejaUnaDedicatoria from './components/DejaUnaDedicatoria.vue';
 import Direcciones from './components/Direcciones.vue';
+import sound from './assets/cancion.mp3';
 
 //const dias = ref(20);
 /*export default {
@@ -27,7 +28,8 @@ export default {
   },
   mounted() {
     // Inicializa el objeto Audio cuando el componente se monta
-    this.audio = new Audio("public/cancion.mp3"); // Ruta relativa al archivo de audio
+    //this.audio = new Audio("public/cancion.mp3"); // Ruta relativa al archivo de audio
+    this.audio = new Audio(sound)
     this.audio.addEventListener("ended", () => {
       this.isPlaying = false; // Restablecer estado cuando el audio termine
     });
