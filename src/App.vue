@@ -27,7 +27,7 @@ export default {
   },
   mounted() {
     // Inicializa el objeto Audio cuando el componente se monta
-    this.audio = new Audio("/cancion.mp3"); // Ruta relativa al archivo de audio
+    this.audio = new Audio("public/cancion.mp3"); // Ruta relativa al archivo de audio
     this.audio.addEventListener("ended", () => {
       this.isPlaying = false; // Restablecer estado cuando el audio termine
     });
