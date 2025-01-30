@@ -19,18 +19,39 @@ import Direcciones from './components/Direcciones.vue';
 }*/
 
 export default {
-  name: "App",
+  data() {
+    return {
+      audio: null, // Referencia al audio
+      isPlaying: false, // Estado para controlar si el audio está en reproducción
+    };
+  },
   mounted() {
-    this.playAudio();
+    // Inicializa el objeto Audio cuando el componente se monta
+    this.audio = new Audio("/cancion.mp3"); // Ruta relativa al archivo de audio
+    this.audio.addEventListener("ended", () => {
+      this.isPlaying = false; // Restablecer estado cuando el audio termine
+    });
   },
   methods: {
     playAudio() {
-      const audio = new Audio("/cancion.mp3"); // Ruta relativa a tu archivo
-      audio.play().catch((error) => {
-        console.warn("La reproducción automática fue bloqueada:", error);
-      });
+      if (!this.isPlaying) {
+        this.audio
+          .play()
+          .then(() => {
+            console.log("Audio reproduciéndose");
+          })
+          .catch((error) => {
+            console.warn("Error al reproducir el audio:", error);
+          });
+      }
     },
-  }, 
+  },
+  beforeDestroy() {
+    if (this.audio) {
+      this.audio.pause(); // Detener el audio si el componente se destruye
+      this.audio = null; // Limpiar referencia
+    }
+  },
   components: {
     Inicio,
     CitaBiblica,
@@ -44,6 +65,7 @@ export default {
 </script>
 
 <template>
+  <img src="/img/reproducir-audio.png" alt="Reproducir" @click="playAudio" class="w-20 h-20 md:w-40 md:h-40 absolute z-50 animate-pulse right-0 top-10">
   <Inicio />
   <CitaBiblica />
   <NuestraHistoria />
