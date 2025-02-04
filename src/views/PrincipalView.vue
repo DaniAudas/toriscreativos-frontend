@@ -1,17 +1,17 @@
 <script>
-import sound from "../assets/cancion.mp3";
-import Inicio from "../components/inicio.vue";
-import CitaBiblica from "../components/CitaBiblica.vue";
-import NuestraHistoria from "../components/NuestraHistoria.vue";
-import Conteo from "../components/Conteo.vue";
-import Enlaces from "../components/Enlaces.vue";
-import DejaUnaDedicatoria from "../components/DejaUnaDedicatoria.vue";
-import Direcciones from "../components/Direcciones.vue";
+import sound from "./assets/cancion.mp3";
+import Inicio from "./components/inicio.vue";
+import CitaBiblica from "./components/CitaBiblica.vue";
+import NuestraHistoria from "./components/NuestraHistoria.vue";
+import Conteo from "./components/Conteo.vue";
+import Enlaces from "./components/Enlaces.vue";
+import DejaUnaDedicatoria from "./components/DejaUnaDedicatoria.vue";
+import Direcciones from "./components/Direcciones.vue";
 
 export default {
   data() {
     return {
-      audio: null, // Referencia al audio
+      audio: null, // Referencia al audio cancion
       isPlaying: false, // Estado para controlar si el audio está en reproducción
     };
   },
