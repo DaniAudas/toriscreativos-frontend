@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="bg-[#B3A500] flex flex-col items-center justify-center w-full">
     <img src="/img/margen-corazon.png" class="w-4/5 h-4/5 md:w-1/2 md:h-1/2 mt-10 mb-10" />
@@ -19,7 +15,3 @@
     <img src="/img/sobre-regalo.jpg" alt="Sobre con Dinero" class="w-4/5 h-4/5 md:w-1/3 md:h-1/3 mt-10 mb-10 rounded-md" />
   </div>
 </template>
-
-<style scoped>
-
-</style>
