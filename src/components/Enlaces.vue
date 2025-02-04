@@ -1,4 +1,5 @@
-<script>
+<script setup>
+  import { RouterLink } from 'vue-router';
 </script>
 <template>
     <div class="flex flex-col md:grid md:grid-cols-3 bg-[#B3A500]"><!--Sección enlaces-->
@@ -6,11 +7,11 @@
       <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl text-[#162651] text-center pt-10 pb-10">MESA DE REGALOS</h1>
       <div class="relative w-full h-40 md:h-64">
         <!-- Imagen PNG (fondo) -->
-        <RouterLink to="/mesa" class="hover:opacity-80 transition duration-300">
+        <RouterLink :to="{name:'mesa'}" class="hover:opacity-80 transition duration-300">
           <img src="/img/regalo.png" alt="Reagalos" class="w-2/4 mx-auto object-cover">
         </RouterLink>
         <!-- Imagen GIF (frente) -->
-        <RouterLink to="/mesa" class="hover:opacity-80 transition duration-300">
+        <RouterLink :to="{name: 'mesa'}" class="hover:opacity-80 transition duration-300">
           <img src="/img/click.gif" alt="Click Aqui" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-10">
         </RouterLink>
       </div>
