@@ -1,12 +1,12 @@
 <script>
-import sound from "./assets/cancion.mp3";
-import Inicio from "./components/inicio.vue";
-import CitaBiblica from "./components/CitaBiblica.vue";
-import NuestraHistoria from "./components/NuestraHistoria.vue";
-import Conteo from "./components/Conteo.vue";
-import Enlaces from "./components/Enlaces.vue";
-import DejaUnaDedicatoria from "./components/DejaUnaDedicatoria.vue";
-import Direcciones from "./components/Direcciones.vue";
+import sound from "/src/assets/cancion.mp3";
+import Inicio from "/src/components/inicio.vue";
+import CitaBiblica from "/src/components/CitaBiblica.vue";
+import NuestraHistoria from "/src/components/NuestraHistoria.vue";
+import Conteo from "/src/components/Conteo.vue";
+import Enlaces from "/src/components/Enlaces.vue";
+import DejaUnaDedicatoria from "/src/components/DejaUnaDedicatoria.vue";
+import Direcciones from "/src/components/Direcciones.vue";
 
 export default {
   data() {
