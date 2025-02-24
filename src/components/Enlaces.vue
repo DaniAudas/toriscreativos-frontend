@@ -1,5 +1,10 @@
 <script setup>
   import { RouterLink } from 'vue-router';
+  import { ref} from 'vue';
+
+  const phoneNumber = ref("2211274274"); // Número en formato internacional sin "+"
+  const message = ref("Hola, ¡Confirmo mi asistencia!");
+  const whatsappLink = ref(`https://wa.me/${phoneNumber.value}?text=${encodeURIComponent(message.value)}`);
 </script>
 <template>
     <div class="flex flex-col md:grid md:grid-cols-3 bg-[#B3A500]"><!--Sección enlaces-->
@@ -28,11 +33,11 @@
       </h1>
       <div class="relative w-full h-80 md:h-64">
         <!-- Imagen PNG (fondo) -->
-        <a href="#" class="hover:opacity-80 transition duration-300">
+        <a :href="whatsappLink" target="_blank" class="hover:opacity-80 transition duration-300">
           <img src="/img/confirma.png" alt="Reagalos" class="w-1/2 md:w-3/4 mx-auto object-cover  mt-12 md:mt-10 lg:mt-32">
         </a>
         <!-- Imagen GIF (frente) -->
-        <a href="#" class="hover:opacity-80 transition duration-300">
+        <a :href="whatsappLink" target="_blank" class="hover:opacity-80 transition duration-300">
           <img src="/img/click.gif" alt="Click Aqui" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-10">
         </a>
       </div>
