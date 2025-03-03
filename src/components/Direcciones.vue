@@ -50,7 +50,7 @@ export default {
       ref="animar" 
       class="w-1/2 h-1/2 rounded-md opacity-0 transition-opacity duration-1000"
       :class="{ 'animate-fadeInLeft': isVisible }">
-      <div class="container opacity-0 transition-opacity duration-1000"
+      <div class="container opacity-0 transition-opacity duration-1000 relative z-10"
       ref="animar"
       :class="{ 'animate-fadeInRight': isVisible }">
         <h2 class="text-3xl text-white mb-5">Banquete</h2>
@@ -59,14 +59,14 @@ export default {
           <span class="underline">Dirección:</span> Av. 5 de Mayo 1400, San Juan
           Aquiahuac, 72810 San Andrés Cholula, Pue.
         </h3>
-        <div class="mt-6 md:mb-6 lg:mb-0 z-50 relative">
+        <div class="mt-6 md:mb-6 lg:mb-0 relative">
           <a href="https://maps.app.goo.gl/EJLjw4rJMfDpsdgz9" target="_blank" class="text-white py-2 px-6 bg-blue-600 hover:bg-blue-700 mt-6 shadow-md hover:shadow-xl transition-shadow duration-300">Dirigime</a>
         </div>
       </div>
     </div>
-    <div class="container relative py-44  md:py-20 lg:py-0"></div>
+      <div class="container relative py-44  md:py-20 lg:py-0"></div>
     <!-- Imagen en la esquina inferior derecha -->
-    <div class="absolute bottom-0 right-0 bg-no-repeat bg-contain bg-[url('/img/esquina-decorada.png')]" 
+    <div class="absolute z-0 bottom-0 right-0 bg-no-repeat bg-contain bg-[url('/img/esquina-decorada.png')]"
         style="width: 25rem; height: 27rem;">
     </div>
   </div>
