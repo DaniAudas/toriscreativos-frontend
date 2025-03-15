@@ -1,4 +1,7 @@
 <script>
+import axios from 'axios';
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default {
   name: "Dedicatorias",
   mounted() {
@@ -6,45 +9,28 @@ export default {
         this.nextSlide();
     }, 5000);
   },
-beforeDestroy() {
-clearInterval(this.autoSlide);
-},
+  beforeDestroy() {
+    clearInterval(this.autoSlide);
+  },
   data() {
     return {
       currentIndex: 0,
-      comments: [
-        { 
-          text: "Queridos amigos les deseamos lo mejor en esta nueva ventura que comienza, Dios los bendiga.", 
-          author: "Lau y Dani" 
-        },
-        { 
-          text: "Les deseo lo mejor muchachos Que todos sus sueños se cumplan", 
-          author: "Oscar Isaias" 
-        },
-        { 
-          text: "Hermanitos míos me alegra saber que darán el siguiente paso al Amor, Felicidades!!", 
-          author: "Erika Ramos" 
-        },
-        { 
-          text: "Muchas felicidades, les deseo lo mejor. Unfuerte abrazo", 
-          author: "Diego" 
-        },
-        { 
-          text: "Mis mejores deseos para ustedes son una pareja muy bonita", 
-          author: "Elena coty" 
-        },
-        { 
-          text: "Que Dios los bendiga en esta nueva etapa de sus vidas, felicidades", 
-          author: "Gina y familia" 
-        },
-      ],
+      dedicatorias: []
     };
+  },
+  async created() {
+    try {
+      const response = await axios.get(`${API_URL}/api/dedicatorias`);
+      this.dedicatorias = response.data.filter(item => item.validated === true);
+    } catch (error) {
+      console.error('Error al obtener los datos:', error);
+    }
   },
   computed: {
     chunkedComments() {
       // Agrupar en chunks dinámicos basados en el tamaño de la pantalla
       const chunkSize = window.innerWidth < 640 ? 1 : 3; // Cambia el tamaño de los chunks según el tamaño de pantalla
-      return this.comments.reduce((result, comment, index) => {
+      return this.dedicatorias.reduce((result, comment, index) => {
         const chunkIndex = Math.floor(index / chunkSize);
         if (!result[chunkIndex]) result[chunkIndex] = [];
         result[chunkIndex].push(comment);
@@ -82,14 +68,16 @@ clearInterval(this.autoSlide);
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <div
-          v-for="(comment, index) in comments"
+          v-for="(dedicatoria, index) in dedicatorias"
           :key="index"
           class="flex-shrink-0 w-full md:w-1/3 p-4"
         >
-          <div class="bg-white rounded-lg shadow-md p-6 text-center">
-            <img src="/img/palomas.png" alt="Decoracion" class="w-24 m-auto">
-            <p class="text-gray-700 italic">"{{ comment.text }}"</p>
-            <h3 class="text-gray-900 font-bold mt-2">- {{ comment.author }}</h3>
+          <div>
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+              <img src="/img/palomas.png" alt="Decoracion" class="w-24 m-auto">
+              <p class="text-gray-700 italic">"{{ dedicatoria.message}}"</p>
+              <h3 class="text-gray-900 font-bold mt-2">- {{ dedicatoria.name }}</h3>
+            </div>
           </div>
         </div>
       </div>

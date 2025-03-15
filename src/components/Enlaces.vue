@@ -1,6 +1,7 @@
 <script setup>
   import { RouterLink } from 'vue-router';
   import { ref} from 'vue';
+  import dedicatorias from "./Dedicatorias.vue";
 
   const phoneNumber = ref("2205055980"); // Número en formato internacional sin "+"
   const message = ref("Hola, ¡Confirmo mi asistencia!");
@@ -23,10 +24,10 @@
         </a>
       </div>
       <h1 class="font-bold text-2xl lg:text-4xl text-[#162651] text-center mt-5 md:mt-2 lg:mt-48">DEJA UNA DEDICATORIA A LOS NOVIOS</h1>
-      <a href="#" class="hover:opacity-80 transition duration-300 relative">
+      <RouterLink :to="{name:'dedicatoria'}" class="hover:opacity-80 transition duration-300 relative">
         <img src="/img/lista-regalos.png" alt="Lista de regalos" class="h-72 md:h-1/3 center mx-auto pt-10 pb-12 md:pb-10 lg:pb-0">
         <img src="/img/click.gif" alt="Click Aqui" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-10">
-      </a>
+      </RouterLink>
     </div>
     <img src="/img/corazonconanillos.png" alt="Corazón con anillos" class="h-16 md:h-1/5 lg:h-1/4 m-auto">
     <div>
