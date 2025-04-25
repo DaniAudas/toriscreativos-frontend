@@ -6,7 +6,7 @@ export default {
     };
   },
   mounted() {
-    const observer = new IntersectionObserver(
+    /*const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -16,7 +16,7 @@ export default {
       },
       {threshold: 0} // Activar cuando el 10% sea visible
     );
-    observer.observe(this.$refs.animar);
+    observer.observe(this.$refs.animar);*/
   },
 };
 </script>
@@ -24,8 +24,7 @@ export default {
     <div class="flex flex-col md:grid md:grid-cols-2 bg-[#FFFCF5]"><!--Sección nuestra historia-->
     <div 
     ref="animar" 
-    class="h-auto relative"
-    :class="{ 'animate-fadeInLeft': isVisible }">
+    class="h-auto relative">
       <h1 class="text-5xl pt-8 text-center font-lobster">
         Nuestra historia
       </h1>
@@ -42,8 +41,7 @@ export default {
       ref="animar" 
       src="/img/nuestra-historia.jpg" 
       alt="Nuestra historia" 
-      class="h-auto sm:w-11/12 lg:w-full"
-      :class="{ 'animate-fadeInRight': isVisible }">
+      class="h-auto sm:w-11/12 lg:w-full">
     </div>
   </div>
 </template>  
