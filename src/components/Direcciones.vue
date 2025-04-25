@@ -37,6 +37,7 @@ export default {
           <span class="font-bold">Parroquia de nuestra señora del destierro</span><br>
           <span class="underline">Dirección:</span> Calle 5 de Mayo esquina calle Morelos
           S/N, 72920 San Sebastián de Aparicio, Pue.
+          <br><span class="underline">Hora:</span> 4:00 pm
         </h3>
         <div class="mt-6">
           <a href="https://maps.app.goo.gl/2NJEBwJCWrY9kiJC8" target="_blank" class="text-white py-2 px-6 bg-blue-600 hover:bg-blue-700 mt-6 shadow-md hover:shadow-xl">Dirigime</a>
@@ -58,6 +59,7 @@ export default {
           <span class="font-bold">Posada Señorial - Salón aquiahuac</span><br>
           <span class="underline">Dirección:</span> Av. 5 de Mayo 1400, San Juan
           Aquiahuac, 72810 San Andrés Cholula, Pue.
+          <br><span class="underline">Hora:</span> 7:00 pm
         </h3>
         <div class="mt-6 md:mb-6 lg:mb-0 relative">
           <a href="https://maps.app.goo.gl/EJLjw4rJMfDpsdgz9" target="_blank" class="text-white py-2 px-6 bg-blue-600 hover:bg-blue-700 mt-6 shadow-md hover:shadow-xl transition-shadow duration-300">Dirigime</a>
