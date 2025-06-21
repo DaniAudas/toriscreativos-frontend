@@ -19,7 +19,7 @@ const dedicatoria = reactive({
   name: '',
   message: null,
   date: fechaFormateada,
-  validated: false,
+  validated: true,
 });
 
 const submitForm = async () => {
@@ -42,11 +42,11 @@ const submitForm = async () => {
       //throw new Error('Error al enviar la dedicatoria');
     else{
       Swal.fire({
-        title: '¡OK!',
-        text: 'Dedicatoria registrada correctamente',
+        title: 'OK',
+        text: '¡Dedicatoria Publicada!',
         icon: 'success',
         showConfirmButton: false,
-        timer: 1500
+        timer: 3000
       }).then(() => {
         window.location.reload(); // Recarga la página después de cerrar el mensaje
       });
