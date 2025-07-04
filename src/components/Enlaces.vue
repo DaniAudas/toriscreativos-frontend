@@ -16,7 +16,7 @@
       </h1>
       <div class="relative w-full h-60 md:h-64">
         <!-- Imagen PNG (fondo) -->
-        <a :href="google_form_link" target="_blank" class="hover:opacity-80 transition duration-300">
+        <a href="#" class="hover:opacity-80 transition duration-300">
           <img src="/img/confirma.png" alt="Reagalos" class="w-1/2 md:w-3/4 mx-auto object-cover  mt-12 md:mt-10 lg:mt-16">
         </a>
         <!-- Imagen GIF (frente) -->
